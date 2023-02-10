@@ -4,6 +4,7 @@ view: markets {
   dimension: markets_code {
     type: string
     sql: ${TABLE}.markets_code ;;
+    primary_key: yes
   }
 
   dimension: markets_name {

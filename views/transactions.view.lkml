@@ -50,4 +50,47 @@ view: transactions {
     type: count
     drill_fields: []
   }
+  measure: total_sales_amount {
+    type: sum
+    sql: ${sales_amount} ;;
+  }
+
+  measure: half_sales_amount{
+    type: number
+    sql: ${total_sales_amount}/2 ;;
+  }
+  measure: total_sale_quantity {
+    type: sum
+    sql: ${sales_qty} ;;
+
+  }
+
+  measure: other_half{
+    type: number
+    sql: ${half_sales_amount}-${total_sales_amount} ;;
+    value_format_name: decimal_0
+    label: "Half of measure ($)"
+    # html:
+    #   {% if value < 0 %}
+    # <span style="color:darkred;">{{ rendered_value }}</span>
+    # {% elsif value > 0 %}
+    # <span style="color:darkgreen;">{{ rendered_value }}</span>
+    # {% else %}
+    # <span style="color:black;">{{ rendered_value }}</span>
+    # {% endif %}  ;;
+
+  }
+
+  # Parameters
+
+  parameter: product_type{
+    type: string
+    allowed_value: {value: "Own Brand"}
+    allowed_value: {value: "Distribution"}
+  }
+
+
+
+
+
 }
