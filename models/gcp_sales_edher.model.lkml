@@ -25,6 +25,7 @@ explore: transactions {
                     ${transactions.currency} != "USD\r" AND
                     ${transactions.currency} != "INR" AND
                     ${transactions.order_year} >2017;;
+
   join: customers {
     foreign_key: customer_code
     relationship: many_to_one

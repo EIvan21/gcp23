@@ -24,12 +24,24 @@ view: transactions {
       week,
       month,
       quarter,
-      year
+      year,
+      month_name
     ]
     convert_tz: no
     datatype: date
     sql: ${TABLE}.order_date ;;
   }
+  dimension: cust_name {
+    type: string
+    sql: ${customers.custmer_name} ;;
+  }
+
+
+  measure: number {
+    type: number
+    sql: ${sales_qty} ;;
+  }
+
 
   dimension: product_code {
     type: string
@@ -45,6 +57,7 @@ view: transactions {
     type: number
     sql: ${TABLE}.sales_qty ;;
   }
+
 
   measure: count {
     type: count
