@@ -3,6 +3,10 @@ connection: "salesgcpea"
 # include all the views
 include: "/views/**/*.view"
 
+# include all dashboards
+include: "/Dasboards/truncated.dashboard.lookml"
+
+
 datagroup: gcp_sales_edher_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
