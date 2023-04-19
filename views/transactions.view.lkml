@@ -9,14 +9,35 @@ view: transactions {
   dimension: customer_code {
     type: string
     sql: ${TABLE}.customer_code ;;
+    suggest_explore: customers
+    suggest_dimension: customer.customer_name
+
   }
 
   dimension: market_code {
     type: string
     sql: ${TABLE}.market_code ;;
+    suggest_explore: markets
+    suggest_dimension: markets.market_name
   }
 
   dimension_group: order {
+    type: time
+    timeframes: [
+      day_of_month,
+      raw,
+      date,
+      week,
+      month,
+      quarter,
+      year,
+      month_name
+    ]
+    convert_tz: no
+    datatype: date
+    sql: ${TABLE}.order_date ;;
+  }
+  dimension_group: order_2 {
     type: time
     timeframes: [
       raw,
@@ -30,13 +51,17 @@ view: transactions {
     convert_tz: no
     datatype: date
     sql: ${TABLE}.order_date ;;
+    html: {{value | date: "%l:%M %p"}} ;;
   }
   dimension: cust_name {
     type: string
     sql: ${customers.custmer_name} ;;
+    group_label: "basics"
   }
 
-
+  dimension: line {
+    sql: row_number() over (order by transactions.order_date);;
+  }
   measure: number {
     type: number
     sql: ${sales_qty} ;;
@@ -46,6 +71,8 @@ view: transactions {
   dimension: product_code {
     type: string
     sql: ${TABLE}.product_code ;;
+    group_label: "basics"
+
   }
 
   dimension: sales_amount {
@@ -66,17 +93,34 @@ view: transactions {
   measure: total_sales_amount {
     type: sum
     sql: ${sales_amount} ;;
+    group_label: "basics"
+    drill_fields: [drill_set*]
+  }
+
+  dimension: testingSplit {
+    type: string
+    sql: concat(${customer_code}, " <br/> ", ${market_code}, " <br/> ", ${cust_name}) ;;
+  }
+
+  measure: total_sales_amount_2 {
+    type: sum
+    sql: ${sales_amount} ;;
+    group_label: "basics"
   }
 
   measure: half_sales_amount{
     type: number
     sql: ${total_sales_amount}/2 ;;
+    group_label: "basics"
   }
   measure: total_sale_quantity {
     type: sum
     sql: ${sales_qty} ;;
+    group_label: "basics"
 
   }
+
+
 
   measure: other_half{
     type: number
@@ -102,7 +146,14 @@ view: transactions {
     allowed_value: {value: "Distribution"}
   }
 
-
+  set: drill_set {
+    fields: [
+      customers.customer_code,
+      order_month,
+      market_code,
+      total_sale_quantity
+    ]
+  }
 
 
 

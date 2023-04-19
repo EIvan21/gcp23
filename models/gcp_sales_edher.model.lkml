@@ -40,4 +40,8 @@ explore: transactions {
     foreign_key: product_code
     relationship: many_to_one
   }
+  join: date {
+    sql_on: ${transactions.order_date} = ${date.date_date} ;;
+    relationship: many_to_one
+  }
 }

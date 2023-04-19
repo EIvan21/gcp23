@@ -13,8 +13,10 @@ view: customers {
   }
 
   dimension: customer_type {
+    label: "customer type test"
     type: string
     sql: ${TABLE}.customer_type ;;
+
   }
 
   measure: count {
