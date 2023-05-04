@@ -8,7 +8,7 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 # # and define the joins that connect them together.
 #
 # explore: order_items {
-#   join: orders {
+#   join: orders {}
 #     relationship: many_to_one
 #     sql_on: ${orders.id} = ${order_items.order_id} ;;
 #   }
