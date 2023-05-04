@@ -23,4 +23,8 @@ view: customers {
     type: count
     drill_fields: [custmer_name]
   }
+
+  measure: sum {
+    type: sum
+  }
 }
