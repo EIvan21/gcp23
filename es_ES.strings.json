@@ -1,0 +1,22 @@
+{
+  "Schedules":"Programaciones",
+  "testing limit": "Testeando Limites",
+  "Best 10 customers": "Mejores 10 Clientes",
+  "Best 10 Markets":"Mejores 10 Mercados",
+  "Best 10 products":"Mejores 10 Productos",
+  "Sales in 2019":"Ventas en 2019",
+  "customers-markets":"Clientes-Mercados",
+  "Total Sales Amount":"Monto total de venta",
+  "Testing long Tables":"Testeando tablas Largas",
+  "Order Year":"Año de orden",
+  "This is a dashboard that has built from Looker Version 23.0, and still working on this instance":"Este dashboard fué hecho desde la version 23.0 y sigue funcionando en esta instancia",
+  "Just testing limits":"Solo Testeando limites",
+  "Sales in 2019 I dont know what put here, just testing localization haha":"Ventas en 2019, no sé que poner aquí jaja solo ando testeando localization LookML",
+  "Testing localization for this parameter":"Testeando localization para este parametro single value title",
+  "Order Date": "Fecha de orden",
+  "Markets Name" : "Nombre Mercado",
+  "Customer Code": "Codigo Cliente",
+  "Market Code": "Codigo Mercado",
+  "Product Code" : "Codigo Producto",
+  "Customer Name" :  "Nombre Cliente"
+}

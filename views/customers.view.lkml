@@ -2,6 +2,7 @@ view: customers {
   sql_table_name: sales.customers ;;
 
   dimension: custmer_name {
+    label: "Customer Name"
     type: string
     sql: ${TABLE}.custmer_name ;;
   }

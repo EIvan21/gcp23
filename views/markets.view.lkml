@@ -8,6 +8,7 @@ view: markets {
   }
 
   dimension: markets_name {
+    label: "Markets Name"
     type: string
     sql: ${TABLE}.markets_name ;;
   }

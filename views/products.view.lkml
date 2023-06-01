@@ -2,6 +2,7 @@ view: products {
   sql_table_name: sales.products ;;
 
   dimension: product_code {
+    label: "Product Code"
     type: string
     sql: ${TABLE}.product_code ;;
     primary_key: yes

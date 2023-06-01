@@ -1,0 +1,22 @@
+{
+  "Schedules":"SchedulesEng",
+  "testing limit": "Testing Limits Eng",
+  "Best 10 customers": "Best 10 customers",
+  "Best 10 Markets":"Best 10 Markets",
+  "Best 10 products":"Best 10 products",
+  "Sales in 2019":"Sales in 2019",
+  "customers-markets":"Customers-Markets",
+  "Total Sales Amount":"Total Sales Amount",
+  "Testing long Tables":"esting long Tables",
+  "Order Year":"Order Year",
+  "This is a dashboard that has built from Looker Version 23.0, and still working on this instance":"This is a dashboard that has built from Looker Version 23.0, and still working on this instance",
+  "Just testing limits":"Just testing limits",
+  "Sales in 2019 I dont know what put here, just testing localization haha":"Sales in 2019 I dont know what put here, just testing localization haha",
+  "Testing localization for this parameter":"Testing localization for this parameter",
+  "Order Date" :  "Order Date",
+  "Markets Name" : "Markets Name",
+  "Customer Code": "Customer Code",
+  "Market Code": "Market Code",
+  "Product Code" : "Product Code",
+  "Customer Name" : "Customer Name"
+}

@@ -7,6 +7,7 @@ view: transactions {
   }
 
   dimension: customer_code {
+    label: "Customer Code"
     type: string
     sql: ${TABLE}.customer_code ;;
     suggest_explore: customers
@@ -15,6 +16,7 @@ view: transactions {
   }
 
   dimension: market_code {
+    label: "Market Code"
     type: string
     sql: ${TABLE}.market_code ;;
     suggest_explore: markets
@@ -23,6 +25,7 @@ view: transactions {
 
   dimension_group: order {
     type: time
+    label: "Order Date"
     timeframes: [
       day_of_month,
       raw,
@@ -69,6 +72,7 @@ view: transactions {
 
 
   dimension: product_code {
+    label: "Product Code"
     type: string
     sql: ${TABLE}.product_code ;;
     group_label: "basics"
@@ -91,6 +95,7 @@ view: transactions {
     drill_fields: []
   }
   measure: total_sales_amount {
+    label: "Total Sales Amount"
     type: sum
     sql: ${sales_amount} ;;
     group_label: "basics"
