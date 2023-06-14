@@ -3,6 +3,7 @@ connection: "salesgcpea"
 # include all the views
 include: "/views/**/*.view"
 include: "/Dashboards/**/*.dashboard.lookml"
+include: "/explores/**/*.explore"
 
 
 datagroup: gcp_sales_edher_default_datagroup {
