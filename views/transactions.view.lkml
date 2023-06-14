@@ -99,7 +99,7 @@ view: transactions {
     type: sum
     sql: ${sales_amount} ;;
     group_label: "basics"
-    drill_fields: [drill_set*]
+    # drill_fields: [drill_set*]
   }
 
   dimension: testingSplit {
@@ -124,6 +124,14 @@ view: transactions {
     group_label: "basics"
 
   }
+
+  measure: cust_list {
+    type: list
+    label: "MArket(s)"
+    list_field: customer_code
+  }
+
+
 
 
 
