@@ -1,8 +1,10 @@
 view: transactions {
   sql_table_name:
 
-   -- if prod -- sales.transactions
-    -- if dev -- sales.transactions_two
+  sales.transactions
+
+  # -- if prod -- sales.transactions
+  #   -- if dev -- sales.transactions_two
      ;;
 
   dimension: currency {
