@@ -11,6 +11,8 @@ datagroup: gcp_sales_edher_default_datagroup {
   max_cache_age: "1 hour"
 }
 
+week_start_day: sunday
+
 persist_with: gcp_sales_edher_default_datagroup
 
 explore: customers {}

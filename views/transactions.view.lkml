@@ -1,5 +1,9 @@
 view: transactions {
-  sql_table_name: sales.transactions ;;
+  sql_table_name:
+
+   -- if prod -- sales.transactions
+    -- if dev -- sales.transactions_two
+     ;;
 
   dimension: currency {
     type: string
@@ -25,7 +29,7 @@ view: transactions {
 
   dimension_group: order {
     type: time
-    label: "Order Date"
+
     timeframes: [
       day_of_month,
       raw,
@@ -34,11 +38,20 @@ view: transactions {
       month,
       quarter,
       year,
-      month_name
+      month_name,
+      day_of_week,
+      day_of_week_index
     ]
     convert_tz: no
     datatype: date
     sql: ${TABLE}.order_date ;;
+  }
+
+  dimension: order_fecha{
+    type: date
+    convert_tz: no
+    sql: ${TABLE}.order_date ;;
+    html: {{ rendered_value | date: _user_attributes["cr_date_format"] }};;
   }
   dimension_group: order_2 {
     type: time
