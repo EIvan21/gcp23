@@ -9,6 +9,7 @@ view: transactions {
 
   dimension: currency {
     type: string
+
     sql: ${TABLE}.currency ;;
   }
 
@@ -53,8 +54,11 @@ view: transactions {
     type: date
     convert_tz: no
     sql: ${TABLE}.order_date ;;
-    # html: {{ rendered_value | date: _user_attributes["cr_date_format"] }};;
+# <<<<<<< HEAD
+#     # html: {{ rendered_value | date: _user_attributes["cr_date_format"] }};;
 
+# =======
+# >>>>>>> branch 'master' of git@github.com:EIvan21/gcp23.git
   }
   dimension_group: order_2 {
     type: time

@@ -7,6 +7,7 @@ view: testview {
   #   description: "Unique ID for each user that has ordered"
   #   type: number
   #   sql: ${TABLE}.user_id ;;
+
   # }
   #
   # dimension: lifetime_orders {
