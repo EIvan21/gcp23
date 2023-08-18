@@ -53,7 +53,6 @@ view: transactions {
     type: date
     convert_tz: no
     sql: ${TABLE}.order_date ;;
-    html: {{ rendered_value | date: _user_attributes["cr_date_format"] }};;
   }
   dimension_group: order_2 {
     type: time
