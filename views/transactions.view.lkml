@@ -142,7 +142,6 @@ view: transactions {
     type: sum
     sql: ${sales_qty} ;;
     group_label: "basics"
-
   }
 
   measure: cust_list {
