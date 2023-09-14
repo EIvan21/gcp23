@@ -10,6 +10,8 @@ view: transactions {
   dimension: currency {
     type: string
 
+
+
     sql: ${TABLE}.currency ;;
   }
 
