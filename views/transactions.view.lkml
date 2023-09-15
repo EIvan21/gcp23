@@ -8,6 +8,7 @@ view: transactions {
      ;;
 
   dimension: currency {
+
     type: string
 
 
