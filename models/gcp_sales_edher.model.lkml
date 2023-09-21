@@ -27,6 +27,13 @@ explore: products {}
 explore: transactions {
   label: "Transactions Edher"
 
+  always_filter: {
+    filters: [
+      customer_code: "",
+      order_date: ""
+    ]
+  }
+
   sql_always_where: ${transactions.sales_amount}>0 AND
                     ${transactions.currency} != "USD\r" AND
                     ${transactions.currency} != "INR" AND
