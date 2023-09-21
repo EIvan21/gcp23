@@ -110,7 +110,10 @@ view: transactions {
     type: number
     sql: ${TABLE}.sales_qty ;;
   }
-
+dimension: date_test{
+  type: date
+  sql: PARSE_DATE(‘%Y%m%d’, Cast(${sales_qty} AS String)) AS datetime ;;
+}
 
   measure: count {
     type: count
