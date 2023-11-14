@@ -14,6 +14,7 @@ datagroup: gcp_sales_edher_default_datagroup {
 week_start_day: sunday
 
 
+
 persist_with: gcp_sales_edher_default_datagroup
 
 explore: customers {}
