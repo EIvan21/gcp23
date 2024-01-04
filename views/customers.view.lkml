@@ -5,6 +5,10 @@ view: customers {
     label: "Customer Name"
     type: string
     sql: ${TABLE}.custmer_name ;;
+    link: {
+      label: "Link Sales"
+      url: "https://gtechdev.cloud.looker.com/dashboards/6?Customer+Name={{ rendered_value }}"
+    }
   }
 
   dimension: customer_code {
