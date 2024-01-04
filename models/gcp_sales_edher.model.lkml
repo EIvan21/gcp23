@@ -1,4 +1,4 @@
-connection: "salesgcpea"
+connection: "sales_dummy"
 
 # include all the views
 include: "/views/**/*.view"
